@@ -66,7 +66,11 @@ const Header = () => {
             </p>
             <form>
               <div className="input--container">
-                <input type="email" placeholder="Enter your email" />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  pattern="\S[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
                 <small>Email is not Valid</small>
               </div>
               <button onClick={(e) => e.preventDefault()} type="submit">
