@@ -1,50 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGlobe,
-  faCaretDown,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./Styles/style.css";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
-  const [language, setLanguage] = useState("English");
-  const [showMenu, setShowMenu] = useState(false);
+  const { t } = useTranslation();
   return (
     <header>
       <nav>
         <img src="./logo.svg" alt="Netflix" />
         <div className="links--container">
-          <div className="language--selector">
-            <div
-              className={`language ${showMenu ? "open" : ""} `}
-              onClick={() => setShowMenu((prevState) => !prevState)}
-            >
-              <FontAwesomeIcon icon={faGlobe} />
-              <span>{language}</span>
-              <FontAwesomeIcon icon={faCaretDown} />
-            </div>
-            <div className={`dropdown--menu ${showMenu ? "show" : ""}`}>
-              <div
-                className="option"
-                onClick={(e) => {
-                  setLanguage(e.target.textContent);
-                  setShowMenu(false);
-                }}
-              >
-                English
-              </div>
-              <div
-                onClick={(e) => {
-                  setLanguage(e.target.textContent);
-                  setShowMenu(false);
-                }}
-                className="option"
-              >
-                हिंदी
-              </div>
-            </div>
-          </div>
+          <LanguageSelector />
           <a
             className="signin--btn"
             href="#"
@@ -55,7 +23,7 @@ const Header = () => {
         </div>
       </nav>
       <div className="membership--wrapper">
-        <h1>Unlimited movies, TV shows and more</h1>
+        <h1>{t("Welcome to Netflix")}</h1>
         <p>Watch anywhere, Cancel anytime.</p>
 
         <div className="signup--wrapper">
@@ -68,8 +36,9 @@ const Header = () => {
               <div className="input--container">
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
-                  pattern="\S[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  pattern="^\S[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 />
                 <small>Email is not Valid</small>
               </div>

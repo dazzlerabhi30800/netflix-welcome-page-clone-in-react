@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "./Main.css";
 
 :root {
   --font-Inter: "Inter", sans-serif;
@@ -15,6 +16,7 @@
 body {
   position: relative;
   min-height: 100vh;
+  background: rgb(1, 12, 57);
   font-family: var(--font-Inter);
   overflow-x: hidden;
 }
@@ -155,10 +157,15 @@ nav {
   z-index: 444;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2rem;
   padding: 1rem 8px;
   margin: 6rem 0 2rem;
   color: #fff;
+
+  > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 }
 .signup--wrapper {
   background: linear-gradient(to right, red, blue);
@@ -203,9 +210,9 @@ form > div > input:invalid {
   border: 2px solid #f81a9c;
   color: #f81a9c;
 }
-form > div > input:valid {
-  border: 2px solid #33f8a2;
-}
+/* form > div > input:valid { */
+/*   border: 2px solid #33f8a2; */
+/* } */
 form > div > input:invalid ~ small {
   opacity: 1;
   font-size: 0.8rem;
