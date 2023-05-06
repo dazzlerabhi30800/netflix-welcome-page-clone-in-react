@@ -2,7 +2,6 @@ import React from "react";
 import data from "./InfoData";
 
 const InfoSection = () => {
-  console.log(data);
   return (
     <div className="info--section">
       {data.map((item, index) => {

@@ -1,5 +1,5 @@
 :root {
-  --info-section-color: #10062d;
+  --info-section-color: #06062d;
 }
 .info--section {
   color: #fff;
@@ -12,6 +12,7 @@
   margin: 0 auto;
   margin-bottom: 1rem;
   position: relative;
+  border-radius: 5px;
   transform: translateY(-100px);
 }
 
@@ -21,6 +22,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #6a6d6c;
+  padding: 1rem 0;
 
   > .info--text {
     display: flex;
@@ -31,10 +33,10 @@
 
     > h2 {
       font-weight: 800;
-      font-size: 2.2rem;
+      font-size: clamp(2.2rem, 3.5vw, 2.8rem);
     }
     > p {
-      font-size: 1.1rem;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
       line-height: 1.3;
     }
   }
@@ -45,7 +47,10 @@
   }
 }
 
-@media (width >= 750px) {
+@media (width >= 800px) {
+  .info--section {
+    transform: translateY(-180px);
+  }
   .info {
     flex-direction: row;
   }

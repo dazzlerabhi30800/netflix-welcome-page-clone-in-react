@@ -1,9 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./Styles/style.css";
 import LanguageSelector from "./LanguageSelector";
+import SignupComp from "./SignupComp";
 
 const Header = () => {
   const { t } = useTranslation();
@@ -27,26 +26,7 @@ const Header = () => {
         <p>Watch anywhere, Cancel anytime.</p>
 
         <div className="signup--wrapper">
-          <div>
-            <p>
-              Ready to Watch? Enter your email to create or restart your
-              membership.
-            </p>
-            <form>
-              <div className="input--container">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  pattern="^\S[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                />
-                <small>Email is not Valid</small>
-              </div>
-              <button onClick={(e) => e.preventDefault()} type="submit">
-                Get Started <FontAwesomeIcon icon={faChevronRight} />
-              </button>
-            </form>
-          </div>
+          <SignupComp backgroundColor="#010C39" />
         </div>
       </div>
     </header>
