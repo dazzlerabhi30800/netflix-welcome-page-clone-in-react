@@ -22,8 +22,8 @@ const Header = () => {
         </div>
       </nav>
       <div className="membership--wrapper">
-        <h1>{t("Welcome to Netflix")}</h1>
-        <p>Watch anywhere, Cancel anytime.</p>
+        <h1>{t("welcome_to_netflix")}</h1>
+        <p>{t("watch_anywhere")}</p>
 
         <div className="signup--wrapper">
           <SignupComp backgroundColor="#010C39" />

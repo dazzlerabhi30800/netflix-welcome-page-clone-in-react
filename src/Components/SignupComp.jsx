@@ -1,16 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const SignupComp = ({ backgroundColor }) => {
+  const { t } = useTranslation();
   return (
     <div
       style={{ backgroundColor: backgroundColor }}
       className="signup--container"
     >
-      <p>
-        Ready to Watch? Enter your email to create or restart your membership.
-      </p>
+      <p>{t("ready_to_watch")}</p>
       <form>
         <div className="input--container">
           <input

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import i18next from "i18next";
 
 const LanguageSelector = () => {
   const [language, setLanguage] = useState("English");
@@ -22,7 +23,7 @@ const LanguageSelector = () => {
           onClick={(e) => {
             setLanguage(e.target.textContent);
             setShowMenu(false);
-            document.querySelector("html").lang = e.target.dataset.lang;
+            i18next.changeLanguage(e.target.dataset.lang);
           }}
         >
           English
@@ -33,7 +34,7 @@ const LanguageSelector = () => {
           onClick={(e) => {
             setLanguage(e.target.textContent);
             setShowMenu(false);
-            document.querySelector("html").lang = e.target.dataset.lang;
+            i18next.changeLanguage(e.target.dataset.lang);
           }}
         >
           हिंदी
