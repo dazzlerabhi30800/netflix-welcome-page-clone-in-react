@@ -17,7 +17,7 @@ const Header = () => {
             href="#"
             onClick={(e) => e.preventDefault()}
           >
-            Sign In
+            {t("sign_in")}
           </a>
         </div>
       </nav>

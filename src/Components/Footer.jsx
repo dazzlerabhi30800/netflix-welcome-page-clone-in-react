@@ -7,9 +7,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer>
-      <h5 className="call">
-        Questions? Call <span>000-800-919-1694</span>
-      </h5>
+      <h5 className="call">{t("call")}</h5>
       <ul className="links">
         {data.map((link, index) => {
           return (
@@ -22,7 +20,7 @@ const Footer = () => {
         })}
       </ul>
       <LanguageSelector />
-      <p>Netflix India</p>
+      <p>Netflix {t("country")}</p>
     </footer>
   );
 };

@@ -21,7 +21,7 @@ const Accordian = () => {
   };
   return (
     <div className="accordian--wrapper">
-      <h3>Frequently Asked Questions</h3>
+      <h3>{t("accordian_heading")}</h3>
       <div className="accordian--container">
         {accData.map((data, index) => {
           return (

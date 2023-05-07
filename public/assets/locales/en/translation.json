@@ -72,5 +72,10 @@
     "link_13": "Speed Test",
     "link_14": "Legal Notice",
     "link_15": "Only on Netflix"
-  }
+  },
+
+  "country": "India",
+  "accordian_heading": "Frequently Asked Questions",
+  "sign_in": "Sign In",
+  "call": "Questions? Call 000-800-919-1694"
 }
