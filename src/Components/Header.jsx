@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Styles/style.css";
 import LanguageSelector from "./LanguageSelector";
 import SignupComp from "./SignupComp";
 
-const Header = () => {
+const Header = ({ language, setLanguage }) => {
   const { t } = useTranslation();
   return (
     <header>
       <nav>
         <img src="./logo.svg" alt="Netflix" />
         <div className="links--container">
-          <LanguageSelector />
+          <LanguageSelector language={language} setLanguage={setLanguage} />
           <a
             className="signin--btn"
             href="#"

@@ -3,7 +3,7 @@ import data from "./LinksData";
 import LanguageSelector from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
 
-const Footer = () => {
+const Footer = ({ language, setLanguage }) => {
   const { t } = useTranslation();
   return (
     <footer>
@@ -19,7 +19,7 @@ const Footer = () => {
           );
         })}
       </ul>
-      <LanguageSelector />
+      <LanguageSelector language={language} setLanguage={setLanguage} />
       <p>Netflix {t("country")}</p>
     </footer>
   );
