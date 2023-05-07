@@ -1,8 +1,10 @@
 import React from "react";
 import data from "./LinksData";
 import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <h5 className="call">
@@ -13,7 +15,7 @@ const Footer = () => {
           return (
             <li key={index}>
               <a onClick={(e) => e.preventDefault()} href="#">
-                {link}
+                {t(`${link}`)}
               </a>
             </li>
           );
