@@ -4,6 +4,11 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const SignupComp = ({ backgroundColor }) => {
+  const inputData = [
+    "input_container.input_text",
+    "input_container.small_text",
+    "input_container.start_btn",
+  ];
   const { t } = useTranslation();
   return (
     <div
@@ -16,13 +21,13 @@ const SignupComp = ({ backgroundColor }) => {
           <input
             type="email"
             name="email"
-            placeholder="Enter your email"
+            placeholder={t(`${inputData[0]}`)}
             pattern="\S+@\S+.\S+"
           />
-          <small>Email is not Valid</small>
+          <small>{t(`${inputData[1]}`)}</small>
         </div>
         <button onClick={(e) => e.preventDefault()} type="submit">
-          Get Started <FontAwesomeIcon icon={faChevronRight} />
+          {t(`${inputData[2]}`)} <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </form>
     </div>

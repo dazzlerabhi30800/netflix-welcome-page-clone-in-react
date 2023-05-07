@@ -1,22 +1,22 @@
 export default [
   {
-    title: "Enjoy on your TV",
-    desc: "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
+    title: "info_section.enjoy.title",
+    desc: "info_section.enjoy.desc",
     img: "./images/enjoy.png",
   },
   {
-    title: "Watch everywhere",
-    desc: "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.",
+    title: "info_section.watch_everywhere.title",
+    desc: "info_section.watch_everywhere.desc",
     img: "./images/watch.png",
   },
   {
-    title: "Create profiles for kids",
-    desc: "Send children on adventures with their favourite characters in a space made just for them—free with your membership.",
+    title: "info_section.profile.title",
+    desc: "info_section.profile.title",
     img: "./images/profile-for-kids.png",
   },
   {
-    title: "Download your shows to watch offline",
-    desc: "Save your favorites easily and always have something to watch.",
+    title: "info_section.download.title",
+    desc: "info_section.download.desc",
     img: "./images/download.png",
   },
 ];
