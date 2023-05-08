@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import "./App.css";
-import Header from "./Components/Header";
-import InfoSection from "./Components/InfoSection";
-import Accordian from "./Components/Accordian";
-import Footer from "./Components/Footer";
+import Home from "./Components/Homepage/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignUp from "./Components/SignupPage/SignUp";
 
 function App() {
   const [language, setLanguage] = useState("English");
   return (
-    <>
-      <Header language={language} setLanguage={setLanguage} />
-      <main>
-        <InfoSection />
-        <Accordian />
-      </main>
-      <Footer language={language} setLanguage={setLanguage} />
-    </>
+    <Router>
+      <>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home language={language} setLanguage={setLanguage} />}
+          />
+
+          <Route
+            path="/signin"
+            element={<SignUp language={language} setLanguage={setLanguage} />}
+          />
+        </Routes>
+      </>
+    </Router>
   );
 }
 

@@ -14,6 +14,8 @@ const Accordian = () => {
       accData.map((data) => {
         if (data.id === id) {
           return { ...data, ask: !data.ask };
+        } else {
+          data.ask = false;
         }
         return data;
       })

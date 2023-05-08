@@ -29,6 +29,7 @@
     flex-direction: column;
     gap: 1rem;
     flex-basis: 100%;
+    text-align: center;
     padding: 1rem 3rem;
 
     > h2 {
@@ -59,6 +60,7 @@
   }
   .info--text {
     flex-basis: 50%;
+    text-align: left !important;
   }
   .info > img {
     flex-basis: 50%;
