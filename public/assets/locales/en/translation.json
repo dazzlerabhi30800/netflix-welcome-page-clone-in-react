@@ -78,5 +78,17 @@
   "accordian_heading": "Frequently Asked Questions",
   "sign_in": "Sign In",
   "back_to_home": "Back to Home",
-  "call": "Questions? Call 000-800-919-1694"
+  "call": "Questions? Call 000-800-919-1694",
+  "email_input": "Email or Phone Number",
+  "password": "Password",
+
+  "remember_me": "Remember me?",
+  "help": "Need help?",
+
+  "new_to_netflix": "New to Netflix?",
+  "sign_up": "Sign up now",
+
+  "captcha_para_1": "This is page is protected by Google reCAPTCHA to ensure you're not a bot",
+  "captcha_span_1": "Learn More",
+  "captcha_span_2": "Show Less"
 }

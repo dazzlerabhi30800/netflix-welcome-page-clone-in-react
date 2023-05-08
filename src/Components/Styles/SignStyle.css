@@ -1,6 +1,15 @@
 :root {
   --body-image-color: rgba(0, 0, 0, 0.6);
   --red: #f80d34;
+  --error-color: #f96422;
+}
+
+body {
+  position: relative;
+  background: var(--main-background-color);
+  font-family: var(--font-Inter);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .signup--comp > nav {
@@ -11,10 +20,10 @@
   font-family: "Inter", sans-serif;
 
   > main {
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 .signin--input {
@@ -23,7 +32,6 @@
   border-radius: 5px;
   width: clamp(350px, 60%, 500px);
   padding: 2rem;
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -56,10 +64,11 @@
   }
   > input:invalid {
     border: none;
-    border-bottom: 2px solid orange;
+    color: var(--error-color);
+    border-bottom: 2px solid var(--error-color);
   }
   > input:invalid ~ small {
-    color: orange;
+    color: var(--error-color);
     opacity: 1;
     display: block;
   }
@@ -175,11 +184,70 @@
   }
 }
 
-body {
+.signup--comp {
   background-image: linear-gradient(
       to top,
       var(--body-image-color),
       var(--body-image-color)
     ),
     url("/images/netflix-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Navbar Styling */
+.signup--comp > nav {
+  width: 100%;
+  padding: 0.5rem;
+
+  > img {
+    width: clamp(100px, 10%, 130px);
+  }
+
+  > .links--container {
+    --font-links: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+}
+.signup--comp .language--selector > .language {
+  --option-width: 120px;
+}
+
+/* Footer Styling */
+.signup--comp > footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 70vh;
+}
+
+@media (width >= 450px) {
+  .signup--comp > footer {
+    height: 55vh;
+  }
+}
+
+@media (width >= 800px) {
+  .signup--comp > main {
+    align-items: flex-start !important;
+  }
+  .signup--comp > nav {
+    width: 95%;
+  }
+  .signin--input {
+    margin-top: 5rem;
+  }
+  .signup--comp .language--selector > .language {
+    --option-width: 140px;
+  }
+  .signup--comp > footer {
+    height: 50vh;
+  }
 }

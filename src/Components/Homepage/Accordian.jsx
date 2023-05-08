@@ -15,9 +15,8 @@ const Accordian = () => {
         if (data.id === id) {
           return { ...data, ask: !data.ask };
         } else {
-          data.ask = false;
+          return { ...data, ask: false };
         }
-        return data;
       })
     );
   };

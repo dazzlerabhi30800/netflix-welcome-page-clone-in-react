@@ -3,6 +3,7 @@ import Navbar from "../Homepage/Navbar";
 import { useTranslation } from "react-i18next";
 import "../Styles/SignStyle.css";
 import SignInput from "./SignInput";
+import SignInFooter from "./SignInFooter";
 
 const SignUp = ({ language, setLanguage }) => {
   const { t } = useTranslation();
@@ -16,6 +17,7 @@ const SignUp = ({ language, setLanguage }) => {
         setLanguage={setLanguage}
       />
       <SignInput />
+      <SignInFooter language={language} setLanguage={setLanguage} />
     </div>
   );
 };

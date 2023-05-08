@@ -6,7 +6,8 @@ footer {
   flex-direction: column;
   gap: 4rem;
   width: 90%;
-  margin: 3rem auto 2rem;
+  margin: 0 auto;
+  margin-top: 3rem;
   padding: 1rem 1rem 2rem;
   color: var(--footer-text-color);
   > h5 {
