@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { Link } from "react-router-dom";
 
 const SignInput = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -41,9 +42,7 @@ const SignInput = () => {
         <div className="additional--links">
           <div className="home--link">
             <p>{t("new_to_netflix")}</p>
-            <a href="#" onClick={(e) => e.preventDefault()}>
-              {t("sign_up")}
-            </a>
+            <Link to="/">{t("sign_up")}</Link>
           </div>
           <div className="additional--info">
             <p>
