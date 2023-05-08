@@ -90,5 +90,7 @@
 
   "captcha_para_1": "This is page is protected by Google reCAPTCHA to ensure you're not a bot",
   "captcha_span_1": "Learn More",
-  "captcha_span_2": "Show Less"
+  "captcha_span_2": "Show Less",
+  "hide": "Hide",
+  "show": "Show"
 }

@@ -22,7 +22,7 @@ const SignInput = () => {
               id="password"
             />
             <span onClick={() => setShowPassword((prevState) => !prevState)}>
-              {showPassword ? "Hide" : "Show"}
+              {showPassword ? t("hide") : t("show")}
             </span>
           </div>
           <div className="button--wrapper">
