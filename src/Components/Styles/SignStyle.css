@@ -4,6 +4,21 @@
   --error-color: #f96422;
 }
 
+:-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fb497d;
+}
+
 body {
   position: relative;
   background: var(--main-background-color);
@@ -15,6 +30,7 @@ body {
 .signup--comp > nav {
   padding: 1rem;
 }
+
 .signup--comp {
   color: #fff;
   font-family: "Inter", sans-serif;

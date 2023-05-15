@@ -11,6 +11,15 @@
   --red: #f80d34;
 }
 
+/* ScrollBar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
