@@ -9,11 +9,12 @@
   --background-color: rgba(1, 8, 36, 0.55);
   --main-background-color: #01061b;
   --red: #f80d34;
+  --scrollbar-width: 4px;
 }
 
 /* ScrollBar Styling */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: var(--scrollbar-width);
 }
 ::-webkit-scrollbar-thumb {
   background: red;
@@ -256,6 +257,9 @@ form > button:hover {
 }
 
 @media (width >= 800px) {
+  ::-webkit-scrollbar {
+    --scrollbar-width: 8px;
+  }
   nav {
     width: 90%;
     margin: 0 auto;
